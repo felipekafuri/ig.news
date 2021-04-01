@@ -22,7 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     )
 
     let customerId = user.data.stripe_customer_id
-
+    // verifica se meu customer no database ja possui um stripe_customer_id
     if (!customerId) {
       // criando customer no stripe
       const stripeCustomer = await stripe.customers.create({
