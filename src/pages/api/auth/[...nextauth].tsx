@@ -12,7 +12,10 @@ export default NextAuth({
       scope: 'read:user'
     })
   ],
-  // TODO JWT TOKEN
+  jwt: {
+    signingKey: process.env.JWT_SIGNING_KEY
+  },
+
   callbacks: {
     async session(session) {
       try {

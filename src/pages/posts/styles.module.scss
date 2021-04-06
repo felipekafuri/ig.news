@@ -10,6 +10,10 @@
 
   a{
     display: block;
+    
+    svg{
+      margin-right: 0.5rem;
+    }
 
     & + a{
       margin-top: 2rem;

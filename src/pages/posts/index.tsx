@@ -5,6 +5,7 @@ import styles from './styles.module.scss'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 import Link from 'next/link'
+import { FiCalendar } from 'react-icons/fi'
 
 interface Post {
   slug: string
@@ -19,8 +20,6 @@ interface PostsProps {
 
 export default function Posts({ posts }: PostsProps) {
   // TODO Load more function
-  // TODO Add icons
-  // TODO Add styling for Markdown
 
   return (
     <>
@@ -32,7 +31,9 @@ export default function Posts({ posts }: PostsProps) {
           {posts.map(post => (
             <Link href={`/posts/${post.slug}`} key={post.slug}>
               <a>
-                <time>{post.updatedAt}</time>
+                <time>
+                  <FiCalendar /> {post.updatedAt}
+                </time>
                 <strong>{post.title}</strong>
                 <p>{post.excerpt}</p>
               </a>
