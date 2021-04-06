@@ -12,6 +12,7 @@ export default NextAuth({
       scope: 'read:user'
     })
   ],
+  // TODO JWT TOKEN
   callbacks: {
     async session(session) {
       try {

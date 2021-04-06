@@ -18,6 +18,10 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
+  // TODO Load more function
+  // TODO Add icons
+  // TODO Add styling for Markdown
+
   return (
     <>
       <Head>
