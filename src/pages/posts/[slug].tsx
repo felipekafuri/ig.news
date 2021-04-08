@@ -15,9 +15,6 @@ interface PostProps {
 }
 
 export default function Post({ post }: PostProps) {
-  // TODO Add coments
-  // TODO Navigations between posts
-
   return (
     <>
       <Head>
